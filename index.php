@@ -1,3 +1,6 @@
+<?php
+require('php/server.php');
+?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -11,5 +14,5 @@
     <h3>Signature requirements upon delivery</h3>
     <div></div>
     <h3>Miscellaneous comments (everything else)</h3>
-    <div></div>
+    <div><?=$var?></div>
 </body>
