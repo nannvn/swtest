@@ -16,7 +16,7 @@ function getComments(&$vars) {
     foreach (['candy', 'refer', 'signature'] as $key) {
         $html = ''; 
         foreach ($comments[$key] as $row) {
-            $html .= '<div class="comment-row">' . $row['comments'] . '</div>';
+            $html .= '<div class="comments-row">' . $row['comments'] . '</div>';
         }
         $vars['comments'][$key] = $html;
     }
