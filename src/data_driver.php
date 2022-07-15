@@ -5,7 +5,7 @@ class DataDriver {
 
     private static $_connection;
 
-    private static function getConnection() {
+    public static function getConnection() {
 
         if (empty(DataDriver::$_connection)) {
             DataDriver::$_connection = mysqli_connect('localhost', 'root', 'pass', 'sales');
