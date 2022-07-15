@@ -1,12 +1,14 @@
 <?php
 require('src/data_driver.php');
 
+
 function loadApp() {
     
     $vars = [];
     getComments($vars);    
     return $vars;
 }
+
 
 function getComments(&$vars) {
     
