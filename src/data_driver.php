@@ -53,6 +53,7 @@ class DataDriver {
             . "comments LIKE '%don\'t call%';";
         DataDriver::getQueryRows($query, $results['call']);
         
+        // misc comments, exclude orderids in current results
         $ids = [];
         foreach ($results as $category) {
             foreach ($category as $row) {

@@ -10,7 +10,7 @@
 - PHP 7.4.3
 - MySQL 8.0.29
 - create `sales` database 
-- run `mysql -u root -p sales < sweetwater_test.sql`
+- run `mysql -u [user] -p sales < sweetwater_test.sql`
 - start web server with: `php -S localhost:8080`
 
 
