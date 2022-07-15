@@ -34,8 +34,16 @@ class DataDriver {
         ];
         
         // candy comments
-        $query = "SELECT comments FROM sweetwater_test WHERE comments LIKE '%candy%';";
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE comments LIKE '%candy%';";
         DataDriver::getQueryRows($query, $results['candy']);
+
+         // referral comments
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE comments LIKE '%refer%';";
+        DataDriver::getQueryRows($query, $results['refer']);
+
+        // signature comments
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE comments LIKE '%sign%';";
+        DataDriver::getQueryRows($query, $results['signature']);
         
         return $results;
     }
