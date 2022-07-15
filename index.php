@@ -16,7 +16,7 @@ $vars = loadApp();
         </div>  
         <div class="comments-section">  
             <h3>Call me / Don't call me</h3>
-            <div></div>    
+            <div><?=$vars['comments']['call']?></div>    
         </div>   
         <div class="comments-section"> 
             <h3>Who referred me</h3>
@@ -28,7 +28,7 @@ $vars = loadApp();
         </div>
         <div class="comments-section">
             <h3>Miscellaneous comments (everything else)</h3>
-            <div></div>
+            <div><?=$vars['comments']['misc']?></div>
         </div>
     </div>
 </body>

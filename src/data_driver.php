@@ -44,6 +44,23 @@ class DataDriver {
         // signature comments
         $query = "SELECT orderid, comments FROM sweetwater_test WHERE comments LIKE '%sign%';";
         DataDriver::getQueryRows($query, $results['signature']);
+    
+        // call comments
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE "
+            . "comments LIKE '%please call%' OR "
+            . "comments LIKE '%call me%' OR "
+            . "comments LIKE '%not call%' OR "
+            . "comments LIKE '%don\'t call%';";
+        DataDriver::getQueryRows($query, $results['call']);
+        
+        $ids = [];
+        foreach ($results as $category) {
+            foreach ($category as $row) {
+                $ids []= $row['orderid'];
+            }
+        }
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE orderid NOT IN (" . implode(',', $ids) . ")";
+        DataDriver::getQueryRows($query, $results['misc']);
         
         return $results;
     }

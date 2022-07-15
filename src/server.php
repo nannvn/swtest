@@ -15,7 +15,9 @@ function getComments(&$vars) {
     $vars['comments'] = [];   
     $comments = DataDriver::getComments();
 
-    foreach (['candy', 'refer', 'signature'] as $key) {
+    foreach (
+        ['candy', 'refer', 'signature', 'call', 'misc'] as $key) {
+
         $html = ''; 
         foreach ($comments[$key] as $row) {
             $html .= '<div class="comments-row">' . $row['comments'] . '</div>';
