@@ -1,6 +1,9 @@
 
 # Web Programmer Test Project
 
+- Task #1 contained in index.php, src and static folders.
+- Task #2 contained in scripts folder, with output file processed_db.sql
+
 ### Installation Requirements:
 
 - Ubuntu
