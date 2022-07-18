@@ -34,7 +34,9 @@ class DataDriver {
         ];
         
         // candy comments
-        $query = "SELECT orderid, comments FROM sweetwater_test WHERE comments LIKE '%candy%';";
+        $query = "SELECT orderid, comments FROM sweetwater_test WHERE "
+            . "comments LIKE '%candy%' OR "
+            . "comments LIKE '%taffy%';";
         DataDriver::getQueryRows($query, $results['candy']);
 
          // referral comments
